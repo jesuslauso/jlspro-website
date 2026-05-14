@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 | JLS Pro Limited</title>
+    <meta name="description" content="JLS Pro Limited 作品集 — 展示我們在燈光設計、音響工程、LED 屏幕、直播串流及舞台設計等領域的專業服務能力。">
+    <link rel="icon" type="image/png" href="assets/images/Jb.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .coming-soon-banner {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(139, 92, 246, 0.08));
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .coming-soon-banner .banner-icon {
+            font-size: 3rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        .coming-soon-banner h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+        .coming-soon-banner p {
+            color: var(--text-gray);
+            max-width: 560px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.8;
+        }
+        .capability-section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .capability-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+        .capability-card:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 212, 255, 0.1);
+        }
+        .capability-card-visual {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .capability-card-visual i {
+            font-size: 4rem;
+            opacity: 0.4;
+            transition: var(--transition-smooth);
+        }
+        .capability-card:hover .capability-card-visual i {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+        .capability-card-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+        .capability-card-body h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-white);
+        }
+        .capability-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .capability-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .capability-tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(0, 212, 255, 0.12);
+            border-radius: 20px;
+            font-size: 0.78rem;
+            color: var(--accent-blue);
+        }
+        .placeholder-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.9rem;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+            margin-top: 1rem;
+        }
+        .placeholder-badge i {
+            font-size: 0.75rem;
+        }
+        .submit-work-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .submit-work-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .submit-work-section p {
+            color: var(--text-gray);
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/banner.001.jpeg" alt="JLS Pro">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                <li><a href="portfolio.html" class="active" data-zh="作品集" data-en="Portfolio">作品集</a></li>
+                <li><a href="about.html" data-zh="關於我們" data-en="About">關於我們</a></li>
+                <li><a href="contact.html" data-zh="聯絡我們" data-en="Contact">聯絡我們</a></li>
+            </ul>
+            <button id="lang-toggle" class="lang-toggle" aria-label="Switch Language">
+                <span class="lang-opt-zh active">繁中</span>
+                <span class="lang-separator">|</span>
+                <span class="lang-opt-en">EN</span>
+            </button>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 data-zh="作品集" data-en="Portfolio">作品集</h1>
+        <p data-zh="展示我們的專業服務能力與技術範疇" data-en="Showcasing our professional capabilities and technical expertise">展示我們的專業服務能力與技術範疇</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section section-dark">
+        <div class="container">
+
+            <!-- Coming Soon Banner -->
+            <div class="coming-soon-banner animate-on-scroll">
+                <span class="banner-icon"><i class="fas fa-camera-retro"></i></span>
+                <h3 data-zh="作品集即將更新" data-en="Portfolio Coming Soon">作品集即將更新</h3>
+                <p data-zh="我們正積極整理及記錄每一個精彩項目的成果，真實的工作照片與影片將陸續在此展示。敬請期待，或透過以下聯絡方式直接向我們查詢服務詳情。" data-en="We are actively compiling and documenting the results of every outstanding project. Real work photos and videos will be showcased here progressively. Stay tuned, or contact us directly for service details.">我們正積極整理及記錄每一個精彩項目的成果，真實的工作照片與影片將陸續在此展示。敬請期待，或透過以下聯絡方式直接向我們查詢服務詳情。</p>
+                <a href="contact.html" class="btn-primary" data-zh="立即查詢" data-en="Enquire Now">立即查詢</a>
+            </div>
+
+            <!-- Capability Showcase -->
+            <div class="section-header animate-on-scroll" style="margin-bottom: 2.5rem;">
+                <h2 data-zh="服務能力展示" data-en="Service Capabilities">服務能力展示</h2>
+                <div class="section-divider"></div>
+                <p data-zh="以下為 JLS Pro Limited 的核心服務領域，我們具備完整的技術能力應對各類活動需求" data-en="Below are JLS Pro Limited's core service areas — we possess comprehensive technical capabilities to meet all event requirements">以下為 JLS Pro Limited 的核心服務領域，我們具備完整的技術能力應對各類活動需求</p>
+            </div>
+
+            <div class="capability-section-grid">
+
+                <!-- Lighting -->
+                <div class="capability-card animate-on-scroll stagger-1">
+                    <div class="capability-card-visual" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                        <i class="fas fa-lightbulb" style="color: var(--accent-blue);"></i>
+                    </div>
+                    <div class="capability-card-body">
+                        <h3 data-zh="燈光設計" data-en="Lighting Design">燈光設計</h3>
+                        <p data-zh="從演唱會舞台到企業活動，我們提供完整的燈光設計方案，包括燈位規劃、設備選型及現場操控，打造符合活動氛圍的視覺效果。" data-en="From concert stages to corporate events, we deliver complete lighting design solutions including fixture plotting, equipment selection, and live operation to create visual effects that match your event's atmosphere.">從演唱會舞台到企業活動，我們提供完整的燈光設計方案，包括燈位規劃、設備選型及現場操控，打造符合活動氛圍的視覺效果。</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag" data-zh="舞台燈光" data-en="Stage Lighting">舞台燈光</span>
+                            <span class="capability-tag" data-zh="氛圍燈光" data-en="Ambient Lighting">氛圍燈光</span>
+                            <span class="capability-tag" data-zh="特效燈光" data-en="Effects Lighting">特效燈光</span>
+                        </div>
+                        <div class="placeholder-badge"><i class="fas fa-clock"></i> <span data-zh="作品照片即將更新" data-en="Photos coming soon">作品照片即將更新</span></div>
+                    </div>
+                </div>
+
+                <!-- Audio -->
+                <div class="capability-card animate-on-scroll stagger-2">
+                    <div class="capability-card-visual" style="background: linear-gradient(135deg, #0f3460, #1a1a2e);">
+                        <i class="fas fa-volume-up" style="color: var(--accent-purple);"></i>
+                    </div>
+                    <div class="capability-card-body">
+                        <h3 data-zh="音響工程" data-en="Sound Engineering">音響工程</h3>
+                        <p data-zh="採用專業音響系統，配合精準的場地聲學分析，確保音場均勻覆蓋，無論大型演唱會或小型會議均能呈現最佳音質。" data-en="Deploying professional sound systems with precise venue acoustic analysis to ensure even sound coverage, delivering optimal audio quality for both large concerts and intimate meetings.">採用專業音響系統，配合精準的場地聲學分析，確保音場均勻覆蓋，無論大型演唱會或小型會議均能呈現最佳音質。</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag" data-zh="現場調音" data-en="Live Mixing">現場調音</span>
+                            <span class="capability-tag" data-zh="系統設計" data-en="System Design">系統設計</span>
+                            <span class="capability-tag" data-zh="聲學分析" data-en="Acoustic Analysis">聲學分析</span>
+                        </div>
+                        <div class="placeholder-badge"><i class="fas fa-clock"></i> <span data-zh="作品照片即將更新" data-en="Photos coming soon">作品照片即將更新</span></div>
+                    </div>
+                </div>
+
+                <!-- LED & Projection -->
+                <div class="capability-card animate-on-scroll stagger-3">
+                    <div class="capability-card-visual" style="background: linear-gradient(135deg, #1a1a2e, #2d1b69);">
+                        <i class="fas fa-tv" style="color: var(--accent-blue);"></i>
+                    </div>
+                    <div class="capability-card-body">
+                        <h3 data-zh="LED 屏幕 & 投影" data-en="LED Screens & Projection">LED 屏幕 &amp; 投影</h3>
+                        <p data-zh="提供高解析度 LED 顯示屏租賃與安裝，以及大型投影系統解決方案，適用於各種場地規模，呈現震撼的視覺效果。" data-en="Providing high-resolution LED screen rental and installation, along with large-scale projection system solutions suitable for venues of all sizes, delivering stunning visual impact.">提供高解析度 LED 顯示屏租賃與安裝，以及大型投影系統解決方案，適用於各種場地規模，呈現震撼的視覺效果。</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag" data-zh="LED 屏幕" data-en="LED Screens">LED 屏幕</span>
+                            <span class="capability-tag" data-zh="投影系統" data-en="Projection Systems">投影系統</span>
+                            <span class="capability-tag">Projection Mapping</span>
+                        </div>
+                        <div class="placeholder-badge"><i class="fas fa-clock"></i> <span data-zh="作品照片即將更新" data-en="Photos coming soon">作品照片即將更新</span></div>
+                    </div>
+                </div>
+
+                <!-- Live Streaming -->
+                <div class="capability-card animate-on-scroll stagger-4">
+                    <div class="capability-card-visual" style="background: linear-gradient(135deg, #16213e, #0f3460);">
+                        <i class="fas fa-broadcast-tower" style="color: var(--accent-purple);"></i>
+                    </div>
+                    <div class="capability-card-body">
+                        <h3 data-zh="直播串流" data-en="Live Streaming">直播串流</h3>
+                        <p data-zh="專業多機位直播製作，支援多平台同步串流，提供即時圖文疊加、導播切換及後製服務，讓您的活動觸達更廣泛的線上觀眾。" data-en="Professional multi-camera live production supporting simultaneous multi-platform streaming, with real-time graphics overlay, vision mixing, and post-production services to reach a broader online audience.">專業多機位直播製作，支援多平台同步串流，提供即時圖文疊加、導播切換及後製服務，讓您的活動觸達更廣泛的線上觀眾。</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag" data-zh="多機位直播" data-en="Multi-Camera Live">多機位直播</span>
+                            <span class="capability-tag" data-zh="多平台串流" data-en="Multi-Platform">多平台串流</span>
+                            <span class="capability-tag" data-zh="即時後製" data-en="Live Post-Production">即時後製</span>
+                        </div>
+                        <div class="placeholder-badge"><i class="fas fa-clock"></i> <span data-zh="作品照片即將更新" data-en="Photos coming soon">作品照片即將更新</span></div>
+                    </div>
+                </div>
+
+                <!-- Stage Design -->
+                <div class="capability-card animate-on-scroll stagger-5">
+                    <div class="capability-card-visual" style="background: linear-gradient(135deg, #2d1b69, #1a1a2e);">
+                        <i class="fas fa-theater-masks" style="color: var(--accent-blue);"></i>
+                    </div>
+                    <div class="capability-card-body">
+                        <h3 data-zh="舞台設計" data-en="Stage Design">舞台設計</h3>
+                        <p data-zh="從概念草圖到實際搭建，我們提供完整的舞台設計與製作服務，融合創意美學與工程技術，打造獨一無二的活動空間。" data-en="From concept sketches to physical construction, we provide complete stage design and fabrication services, blending creative aesthetics with engineering to create unique event spaces.">從概念草圖到實際搭建，我們提供完整的舞台設計與製作服務，融合創意美學與工程技術，打造獨一無二的活動空間。</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag" data-zh="概念設計" data-en="Concept Design">概念設計</span>
+                            <span class="capability-tag" data-zh="舞台搭建" data-en="Stage Construction">舞台搭建</span>
+                            <span class="capability-tag" data-zh="空間規劃" data-en="Space Planning">空間規劃</span>
+                        </div>
+                        <div class="placeholder-badge"><i class="fas fa-clock"></i> <span data-zh="作品照片即將更新" data-en="Photos coming soon">作品照片即將更新</span></div>
+                    </div>
+                </div>
+
+                <!-- AV Engineering -->
+                <div class="capability-card animate-on-scroll stagger-6">
+                    <div class="capability-card-visual" style="background: linear-gradient(135deg, #1a1a2e, #0f3460);">
+                        <i class="fas fa-tools" style="color: var(--accent-purple);"></i>
+                    </div>
+                    <div class="capability-card-body">
+                        <h3 data-zh="影音工程項目" data-en="AV Engineering">影音工程項目</h3>
+                        <p data-zh="為場所提供固定安裝的影音系統工程，包括系統設計、設備採購、安裝調試及維護保養，適用於會議室、禮堂、宗教場所等。" data-en="Providing permanent AV system installations for venues, including system design, equipment procurement, commissioning, and maintenance for conference rooms, auditoriums, houses of worship, and more.">為場所提供固定安裝的影音系統工程，包括系統設計、設備採購、安裝調試及維護保養，適用於會議室、禮堂、宗教場所等。</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag" data-zh="系統設計" data-en="System Design">系統設計</span>
+                            <span class="capability-tag" data-zh="固定安裝" data-en="Fixed Installation">固定安裝</span>
+                            <span class="capability-tag" data-zh="維護保養" data-en="Maintenance">維護保養</span>
+                        </div>
+                        <div class="placeholder-badge"><i class="fas fa-clock"></i> <span data-zh="作品照片即將更新" data-en="Photos coming soon">作品照片即將更新</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Submit Work Invitation -->
+            <div class="submit-work-section animate-on-scroll">
+                <h3 data-zh="有意合作？" data-en="Interested in Working Together?">有意合作？</h3>
+                <p data-zh="如您希望了解更多關於我們的服務能力，或有意洽談合作，歡迎隨時聯絡我們。我們很樂意根據您的活動需求提供詳細的方案建議。" data-en="If you would like to learn more about our service capabilities or discuss a potential collaboration, please feel free to contact us. We are happy to provide detailed proposals tailored to your event requirements.">如您希望了解更多關於我們的服務能力，或有意洽談合作，歡迎隨時聯絡我們。我們很樂意根據您的活動需求提供詳細的方案建議。</p>
+                <a href="contact.html" class="btn-primary" data-zh="聯絡我們查詢" data-en="Contact Us">聯絡我們查詢</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-darker">
+        <div class="container animate-on-scroll">
+            <h2 data-zh="讓您的活動成為我們的第一個精彩案例" data-en="Let Your Event Be Our Next Showcase">讓您的活動成為我們的第一個精彩案例</h2>
+            <p data-zh="我們期待與您攜手，共同創造令人難忘的視聽體驗" data-en="We look forward to partnering with you to create unforgettable audio visual experiences">我們期待與您攜手，共同創造令人難忘的視聽體驗</p>
+            <a href="contact.html" class="btn-primary" data-zh="開始您的項目" data-en="Start Your Project">開始您的項目</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/banner.001.jpeg" alt="JLS Pro">
+                <p data-zh="JLS Pro Limited 致力於為各類活動提供最專業的影音技術服務，以創新科技和精益求精的態度，打造令人難忘的視聽體驗。" data-en="JLS Pro Limited is dedicated to providing professional audio visual technical services for all types of events, delivering unforgettable experiences through innovative technology and relentless pursuit of excellence.">JLS Pro Limited 致力於為各類活動提供最專業的影音技術服務，以創新科技和精益求精的態度，打造令人難忘的視聽體驗。</p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="https://www.facebook.com/profile.php?id=61583541550779" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="快速連結" data-en="Quick Links">快速連結</h4>
+                <ul>
+                    <li><a href="index.html" data-zh="首頁" data-en="Home">首頁</a></li>
+                    <li><a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                    <li><a href="portfolio.html" data-zh="作品集" data-en="Portfolio">作品集</a></li>
+                    <li><a href="about.html" data-zh="關於我們" data-en="About">關於我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="服務項目" data-en="Services">服務項目</h4>
+                <ul>
+                    <li><a href="services.html" data-zh="燈光設計" data-en="Lighting Design">燈光設計</a></li>
+                    <li><a href="services.html" data-zh="音響工程" data-en="Sound Engineering">音響工程</a></li>
+                    <li><a href="services.html" data-zh="LED 屏幕" data-en="LED Screens">LED 屏幕</a></li>
+                    <li><a href="services.html" data-zh="直播串流" data-en="Live Streaming">直播串流</a></li>
+                    <li><a href="services.html" data-zh="舞台設計" data-en="Stage Design">舞台設計</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="聯絡資訊" data-en="Contact Info">聯絡資訊</h4>
+                <ul>
+                    <li><a href="mailto:jlau@jlspro.com.hk" data-zh-html="<i class='fas fa-envelope' style='margin-right: 8px;'></i>jlau@jlspro.com.hk" data-en-html="<i class='fas fa-envelope' style='margin-right: 8px;'></i>jlau@jlspro.com.hk"><i class="fas fa-envelope" style="margin-right: 8px;"></i>jlau@jlspro.com.hk</a></li>
+                    <li><a href="tel:+85253600853" data-zh-html="<i class='fas fa-phone' style='margin-right: 8px;'></i>+852 5360 0853" data-en-html="<i class='fas fa-phone' style='margin-right: 8px;'></i>+852 5360 0853"><i class="fas fa-phone" style="margin-right: 8px;"></i>+852 5360 0853</a></li>
+                    <li><a href="https://www.jlspro.com.hk" target="_blank" data-zh-html="<i class='fas fa-globe' style='margin-right: 8px;'></i>www.jlspro.com.hk" data-en-html="<i class='fas fa-globe' style='margin-right: 8px;'></i>www.jlspro.com.hk"><i class="fas fa-globe" style="margin-right: 8px;"></i>www.jlspro.com.hk</a></li>
+                    <li><a href="contact.html" data-zh-html="<i class='fas fa-map-marker-alt' style='margin-right: 8px;'></i>香港" data-en-html="<i class='fas fa-map-marker-alt' style='margin-right: 8px;'></i>Hong Kong"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>香港</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JLS Pro Limited. All Rights Reserved.</p>
+            <p>Professional · Proactive · Production</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang.js"></script>
+</body>
+</html>

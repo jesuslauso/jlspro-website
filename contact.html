@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 | JLS Pro Limited</title>
+    <meta name="description" content="聯繫 JLS Pro Limited，獲取專業影音服務報價及諮詢。">
+    <link rel="icon" type="image/png" href="assets/images/Jb.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/banner.001.jpeg" alt="JLS Pro">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                <li><a href="portfolio.html" data-zh="作品集" data-en="Portfolio">作品集</a></li>
+                <li><a href="about.html" data-zh="關於我們" data-en="About">關於我們</a></li>
+                <li><a href="contact.html" class="active" data-zh="聯絡我們" data-en="Contact">聯絡我們</a></li>
+            </ul>
+            <button id="lang-toggle" class="lang-toggle" aria-label="Switch Language">
+                <span class="lang-opt-zh active">繁中</span>
+                <span class="lang-separator">|</span>
+                <span class="lang-opt-en">EN</span>
+            </button>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 data-zh="聯絡我們" data-en="Contact Us">聯絡我們</h1>
+        <p data-zh="讓我們一起討論您的下一個精彩項目" data-en="Let's discuss your next outstanding project together">讓我們一起討論您的下一個精彩項目</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form animate-on-scroll">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;" data-zh="發送查詢" data-en="Send Enquiry">發送查詢</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem; font-size: 0.95rem;" data-zh="填寫以下表單，我們將在 24 小時內回覆您" data-en="Fill in the form below and we will respond within 24 hours">填寫以下表單，我們將在 24 小時內回覆您</p>
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name" data-zh="姓名 *" data-en="Name *">姓名 *</label>
+                            <input type="text" id="name" name="name" data-zh-placeholder="請輸入您的姓名" data-en-placeholder="Enter your name" placeholder="請輸入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-zh="電郵地址 *" data-en="Email Address *">電郵地址 *</label>
+                            <input type="email" id="email" name="email" data-zh-placeholder="請輸入您的電郵地址" data-en-placeholder="Enter your email address" placeholder="請輸入您的電郵地址" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-zh="聯絡電話" data-en="Phone Number">聯絡電話</label>
+                            <input type="tel" id="phone" name="phone" data-zh-placeholder="請輸入您的聯絡電話" data-en-placeholder="Enter your phone number" placeholder="請輸入您的聯絡電話">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" data-zh="感興趣的服務" data-en="Service of Interest">感興趣的服務</label>
+                            <select id="service" name="service">
+                                <option value="" data-zh="請選擇服務類型" data-en="Select a service type">請選擇服務類型</option>
+                                <option value="lighting" data-zh="燈光設計" data-en="Lighting Design">燈光設計</option>
+                                <option value="sound" data-zh="音響工程" data-en="Sound Engineering">音響工程</option>
+                                <option value="led" data-zh="LED 屏幕 & 投影" data-en="LED Screens & Projection">LED 屏幕 & 投影</option>
+                                <option value="streaming" data-zh="直播串流" data-en="Live Streaming">直播串流</option>
+                                <option value="stage" data-zh="舞台設計" data-en="Stage Design">舞台設計</option>
+                                <option value="vj" data-zh="視覺效果（VJ）" data-en="Visual Effects (VJ)">視覺效果（VJ）</option>
+                                <option value="video" data-zh="錄影拍攝" data-en="Video Production">錄影拍攝</option>
+                                <option value="av-engineering" data-zh="影音工程項目" data-en="AV Engineering">影音工程項目</option>
+                                <option value="event" data-zh="活動統籌" data-en="Event Management">活動統籌</option>
+                                <option value="other" data-zh="其他" data-en="Other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type" data-zh="活動類型" data-en="Event Type">活動類型</label>
+                            <select id="event-type" name="event-type">
+                                <option value="" data-zh="請選擇活動類型" data-en="Select an event type">請選擇活動類型</option>
+                                <option value="concert" data-zh="演唱會" data-en="Concert">演唱會</option>
+                                <option value="conference" data-zh="會議" data-en="Conference">會議</option>
+                                <option value="exhibition" data-zh="展覽" data-en="Exhibition">展覽</option>
+                                <option value="corporate" data-zh="企業活動" data-en="Corporate Event">企業活動</option>
+                                <option value="wedding" data-zh="婚禮" data-en="Wedding">婚禮</option>
+                                <option value="launch" data-zh="發佈會" data-en="Product Launch">發佈會</option>
+                                <option value="other" data-zh="其他" data-en="Other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-zh="訊息內容 *" data-en="Message *">訊息內容 *</label>
+                            <textarea id="message" name="message" data-zh-placeholder="請描述您的需求，包括活動日期、場地、預算等資訊..." data-en-placeholder="Please describe your requirements, including event date, venue, budget, etc..." placeholder="請描述您的需求，包括活動日期、場地、預算等資訊..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem;" data-zh="發送查詢" data-en="Send Enquiry">發送查詢</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info animate-on-scroll">
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;" data-zh="聯絡資訊" data-en="Contact Information">聯絡資訊</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 2rem; font-size: 0.95rem;" data-zh="歡迎透過以下方式與我們聯繫" data-en="Feel free to reach us through the following channels">歡迎透過以下方式與我們聯繫</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4 data-zh="電郵地址" data-en="Email">電郵地址</h4>
+                            <p><a href="mailto:jlau@jlspro.com.hk" style="color: inherit;">jlau@jlspro.com.hk</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4 data-zh="聯絡電話" data-en="Phone">聯絡電話</h4>
+                            <p>+852 5360 0853</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+852 5360 0853</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-globe"></i></div>
+                        <div>
+                            <h4 data-zh="公司網站" data-en="Website">公司網站</h4>
+                            <p><a href="https://www.jlspro.com.hk" target="_blank" style="color: inherit;">www.jlspro.com.hk</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 data-zh="公司地址" data-en="Address">公司地址</h4>
+                            <p data-zh="香港" data-en="Hong Kong">香港</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4 data-zh="營業時間" data-en="Business Hours">營業時間</h4>
+                            <p data-zh-html="星期一至五：09:00 - 18:00<br>星期六：09:00 - 13:00<br>星期日及公眾假期休息" data-en-html="Mon – Fri: 09:00 – 18:00<br>Sat: 09:00 – 13:00<br>Sun & Public Holidays: Closed">星期一至五：09:00 - 18:00<br>星期六：09:00 - 13:00<br>星期日及公眾假期休息</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h4 style="margin-bottom: 0.8rem;" data-zh="社交媒體" data-en="Social Media">社交媒體</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61583541550779" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="contact-map">
+                        <div style="text-align: center; color: var(--text-gray);">
+                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem; display: block; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                            <p data-zh="香港" data-en="Hong Kong">香港</p>
+                            <p style="font-size: 0.8rem; margin-top: 0.5rem;" data-zh="地圖位置" data-en="Map Location">地圖位置</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-darker">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 data-zh="常見問題" data-en="Frequently Asked Questions">常見問題</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="service-detail-card animate-on-scroll" style="grid-template-columns: 1fr; cursor: pointer;">
+                    <div class="service-detail-content">
+                        <h3 style="font-size: 1.1rem;" data-zh="如何獲取報價？" data-en="How can I get a quote?">如何獲取報價？</h3>
+                        <p data-zh="您可以透過填寫上方的查詢表單，或直接致電 / WhatsApp 聯繫我們。請提供活動日期、場地、規模及所需服務等資訊，我們將盡快為您提供詳細報價。" data-en="You can fill in the enquiry form above, or contact us directly via phone / WhatsApp. Please provide details such as event date, venue, scale, and required services, and we will provide a detailed quote as soon as possible.">您可以透過填寫上方的查詢表單，或直接致電 / WhatsApp 聯繫我們。請提供活動日期、場地、規模及所需服務等資訊，我們將盡快為您提供詳細報價。</p>
+                    </div>
+                </div>
+                <div class="service-detail-card animate-on-scroll" style="grid-template-columns: 1fr; cursor: pointer;">
+                    <div class="service-detail-content">
+                        <h3 style="font-size: 1.1rem;" data-zh="需要提前多久預約？" data-en="How far in advance should I book?">需要提前多久預約？</h3>
+                        <p data-zh="建議至少提前 2-4 週預約，大型活動建議提前 1-3 個月。旺季期間（如節日、畢業季）建議更早預約以確保檔期。" data-en="We recommend booking at least 2–4 weeks in advance; for large-scale events, 1–3 months is advisable. During peak seasons (holidays, graduation periods), earlier booking is recommended to secure availability.">建議至少提前 2-4 週預約，大型活動建議提前 1-3 個月。旺季期間（如節日、畢業季）建議更早預約以確保檔期。</p>
+                    </div>
+                </div>
+                <div class="service-detail-card animate-on-scroll" style="grid-template-columns: 1fr; cursor: pointer;">
+                    <div class="service-detail-content">
+                        <h3 style="font-size: 1.1rem;" data-zh="是否提供現場技術支援？" data-en="Do you provide on-site technical support?">是否提供現場技術支援？</h3>
+                        <p data-zh="是的，我們所有服務都包含專業技術人員的現場支援，確保活動期間設備正常運作，並即時處理任何突發狀況。" data-en="Yes, all our services include on-site support from professional technicians, ensuring equipment operates smoothly throughout the event and any issues are resolved immediately.">是的，我們所有服務都包含專業技術人員的現場支援，確保活動期間設備正常運作，並即時處理任何突發狀況。</p>
+                    </div>
+                </div>
+                <div class="service-detail-card animate-on-scroll" style="grid-template-columns: 1fr; cursor: pointer;">
+                    <div class="service-detail-content">
+                        <h3 style="font-size: 1.1rem;" data-zh="服務範圍是否僅限香港？" data-en="Is your service area limited to Hong Kong?">服務範圍是否僅限香港？</h3>
+                        <p data-zh="我們的主要服務範圍為香港，但也承接澳門、大灣區及海外項目。跨境項目請提前與我們溝通，以便安排物流及人員調配。" data-en="Our primary service area is Hong Kong, but we also undertake projects in Macau, the Greater Bay Area, and overseas. For cross-border projects, please contact us in advance so we can arrange logistics and crew deployment.">我們的主要服務範圍為香港，但也承接澳門、大灣區及海外項目。跨境項目請提前與我們溝通，以便安排物流及人員調配。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/banner.001.jpeg" alt="JLS Pro">
+                <p data-zh="JLS Pro Limited 致力於為各類活動提供最專業的影音技術服務，以創新科技和豐富經驗，打造令人難忘的視聽體驗。" data-en="JLS Pro Limited is dedicated to providing professional audio visual technical services for all types of events, delivering unforgettable experiences through innovative technology and extensive expertise.">JLS Pro Limited 致力於為各類活動提供最專業的影音技術服務，以創新科技和豐富經驗，打造令人難忘的視聽體驗。</p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="https://www.facebook.com/profile.php?id=61583541550779" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="快速連結" data-en="Quick Links">快速連結</h4>
+                <ul>
+                    <li><a href="index.html" data-zh="首頁" data-en="Home">首頁</a></li>
+                    <li><a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                    <li><a href="portfolio.html" data-zh="作品集" data-en="Portfolio">作品集</a></li>
+                    <li><a href="about.html" data-zh="關於我們" data-en="About">關於我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="服務項目" data-en="Services">服務項目</h4>
+                <ul>
+                    <li><a href="services.html" data-zh="燈光設計" data-en="Lighting Design">燈光設計</a></li>
+                    <li><a href="services.html" data-zh="音響工程" data-en="Sound Engineering">音響工程</a></li>
+                    <li><a href="services.html" data-zh="LED 屏幕" data-en="LED Screens">LED 屏幕</a></li>
+                    <li><a href="services.html" data-zh="直播串流" data-en="Live Streaming">直播串流</a></li>
+                    <li><a href="services.html" data-zh="舞台設計" data-en="Stage Design">舞台設計</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="聯絡資訊" data-en="Contact Info">聯絡資訊</h4>
+                <ul>
+                    <li><a href="mailto:jlau@jlspro.com.hk" data-zh-html="<i class='fas fa-envelope' style='margin-right: 8px;'></i>jlau@jlspro.com.hk" data-en-html="<i class='fas fa-envelope' style='margin-right: 8px;'></i>jlau@jlspro.com.hk"><i class="fas fa-envelope" style="margin-right: 8px;"></i>jlau@jlspro.com.hk</a></li>
+                    <li><a href="tel:+85253600853" data-zh-html="<i class='fas fa-phone' style='margin-right: 8px;'></i>+852 5360 0853" data-en-html="<i class='fas fa-phone' style='margin-right: 8px;'></i>+852 5360 0853"><i class="fas fa-phone" style="margin-right: 8px;"></i>+852 5360 0853</a></li>
+                    <li><a href="https://www.jlspro.com.hk" target="_blank" data-zh-html="<i class='fas fa-globe' style='margin-right: 8px;'></i>www.jlspro.com.hk" data-en-html="<i class='fas fa-globe' style='margin-right: 8px;'></i>www.jlspro.com.hk"><i class="fas fa-globe" style="margin-right: 8px;"></i>www.jlspro.com.hk</a></li>
+                    <li><a href="contact.html" data-zh-html="<i class='fas fa-map-marker-alt' style='margin-right: 8px;'></i>香港" data-en-html="<i class='fas fa-map-marker-alt' style='margin-right: 8px;'></i>Hong Kong"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>香港</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JLS Pro Limited. All Rights Reserved.</p>
+            <p>Professional · Proactive · Production</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang.js"></script>
+</body>
+</html>

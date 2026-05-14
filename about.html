@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 | JLS Pro Limited</title>
+    <meta name="description" content="了解 JLS Pro Limited 的公司理念、專業承諾和服務態度。">
+    <link rel="icon" type="image/png" href="assets/images/Jb.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .commitment-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: var(--transition-smooth);
+        }
+        .commitment-card:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-4px);
+        }
+        .commitment-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .commitment-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-blue);
+        }
+        .commitment-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        .service-scope-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .scope-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            transition: var(--transition-smooth);
+        }
+        .scope-item:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+        .scope-item i {
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/banner.001.jpeg" alt="JLS Pro">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                <li><a href="portfolio.html" data-zh="作品集" data-en="Portfolio">作品集</a></li>
+                <li><a href="about.html" class="active" data-zh="關於我們" data-en="About">關於我們</a></li>
+                <li><a href="contact.html" data-zh="聯絡我們" data-en="Contact">聯絡我們</a></li>
+            </ul>
+            <button id="lang-toggle" class="lang-toggle" aria-label="Switch Language">
+                <span class="lang-opt-zh active">繁中</span>
+                <span class="lang-separator">|</span>
+                <span class="lang-opt-en">EN</span>
+            </button>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 data-zh="關於我們" data-en="About Us">關於我們</h1>
+        <p data-zh="以專業、主動、創新的精神，為每一場活動注入生命力" data-en="Infusing every event with life through professionalism, proactivity, and innovation">以專業、主動、創新的精神，為每一場活動注入生命力</p>
+    </section>
+
+    <!-- About Intro -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="about-intro">
+                <div class="about-text animate-on-scroll">
+                    <h3 data-zh="我們是 JLS Pro Limited" data-en="We Are JLS Pro Limited">我們是 JLS Pro Limited</h3>
+                    <p data-zh="JLS Pro Limited 是一家專注於影音技術服務的專業公司，致力於為會議、展覽、活動、演唱會等各類場合提供全方位的影音解決方案。" data-en="JLS Pro Limited is a professional company specialising in audio visual technical services, dedicated to providing comprehensive AV solutions for conferences, exhibitions, events, concerts, and more.">JLS Pro Limited 是一家專注於影音技術服務的專業公司，致力於為會議、展覽、活動、演唱會等各類場合提供全方位的影音解決方案。</p>
+                    <p data-zh="我們由一群對影音技術充滿熱忱的專業人士所組成，以嚴謹的工作態度和對品質的極致追求，為客戶打造超越期望的視聽體驗。無論活動規模大小，我們都以同等的專注與投入，確保每一個細節都達到最高標準。" data-en="Our team comprises passionate AV professionals who bring rigorous work ethic and an unwavering pursuit of quality to deliver experiences that exceed client expectations. Regardless of event scale, we apply the same level of dedication and attention to detail, ensuring the highest standards are met.">我們由一群對影音技術充滿熱忱的專業人士所組成，以嚴謹的工作態度和對品質的極致追求，為客戶打造超越期望的視聽體驗。無論活動規模大小，我們都以同等的專注與投入，確保每一個細節都達到最高標準。</p>
+                    <p data-zh="「Professional · Proactive · Production」不僅是我們的標語，更是我們的核心價值觀——以專業態度面對每一個項目，以主動精神預見並解決問題，以卓越的製作品質贏得客戶信賴。" data-en="'Professional · Proactive · Production' is not merely our tagline — it is our core philosophy. We approach every project with professionalism, proactively anticipate and resolve challenges, and earn client trust through exceptional production quality.">「Professional · Proactive · Production」不僅是我們的標語，更是我們的核心價值觀——以專業態度面對每一個項目，以主動精神預見並解決問題，以卓越的製作品質贏得客戶信賴。</p>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="assets/images/JFull.jpeg" alt="JLS Pro" style="width: 100%; border-radius: 16px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section section-darker">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 data-zh="核心價值" data-en="Core Values">核心價值</h2>
+                <div class="section-divider"></div>
+                <p data-zh="驅動我們不斷前進的三大信念" data-en="Three guiding principles that drive us forward">驅動我們不斷前進的三大信念</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll stagger-1">
+                    <div class="value-icon">🎯</div>
+                    <h3 data-zh="Professional 專業" data-en="Professional">Professional 專業</h3>
+                    <p data-zh="我們堅持使用業界頂級設備，團隊成員均具備紮實的專業知識，確保每一個環節都達到最高標準，絕不妥協於品質。" data-en="We insist on using industry-leading equipment, and every team member possesses solid professional expertise. We ensure the highest standards at every stage, never compromising on quality.">我們堅持使用業界頂級設備，團隊成員均具備紮實的專業知識，確保每一個環節都達到最高標準，絕不妥協於品質。</p>
+                </div>
+                <div class="value-card animate-on-scroll stagger-2">
+                    <div class="value-icon">⚡</div>
+                    <h3 data-zh="Proactive 主動" data-en="Proactive">Proactive 主動</h3>
+                    <p data-zh="我們不只是被動地執行任務，而是主動預見潛在問題，提前準備解決方案，以積極的服務態度確保活動萬無一失。" data-en="We don't simply execute tasks reactively — we proactively anticipate potential issues, prepare solutions in advance, and adopt a positive service attitude to ensure flawless event delivery.">我們不只是被動地執行任務，而是主動預見潛在問題，提前準備解決方案，以積極的服務態度確保活動萬無一失。</p>
+                </div>
+                <div class="value-card animate-on-scroll stagger-3">
+                    <div class="value-icon">🎬</div>
+                    <h3 data-zh="Production 製作" data-en="Production">Production 製作</h3>
+                    <p data-zh="從概念到落地，我們注重每一個製作細節，以工匠精神打磨每一場演出，交付超越期望的成果，讓每個活動都成為難忘的體驗。" data-en="From concept to delivery, we pay meticulous attention to every production detail, refining each show with craftsmanship to deliver results that exceed expectations and make every event an unforgettable experience.">從概念到落地，我們注重每一個製作細節，以工匠精神打磨每一場演出，交付超越期望的成果，讓每個活動都成為難忘的體驗。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 data-zh="我們的承諾" data-en="Our Commitment">我們的承諾</h2>
+                <div class="section-divider"></div>
+                <p data-zh="每一個項目，我們都全力以赴" data-en="We give our all to every project">每一個項目，我們都全力以赴</p>
+            </div>
+            <div class="commitment-grid">
+                <div class="commitment-card animate-on-scroll stagger-1">
+                    <span class="commitment-icon"><i class="fas fa-comments" style="color: var(--accent-blue);"></i></span>
+                    <h3 data-zh="透明溝通" data-en="Transparent Communication">透明溝通</h3>
+                    <p data-zh="從初次洽談到活動結束，我們保持開放透明的溝通，讓您在每個階段都清楚了解進度與安排，放心交託。" data-en="From initial consultation to event completion, we maintain open and transparent communication, keeping you informed at every stage so you can entrust your event to us with confidence.">從初次洽談到活動結束，我們保持開放透明的溝通，讓您在每個階段都清楚了解進度與安排，放心交託。</p>
+                </div>
+                <div class="commitment-card animate-on-scroll stagger-2">
+                    <span class="commitment-icon"><i class="fas fa-drafting-compass" style="color: var(--accent-blue);"></i></span>
+                    <h3 data-zh="度身訂製" data-en="Bespoke Solutions">度身訂製</h3>
+                    <p data-zh="我們深入了解每位客戶的需求與願景，提供針對性的影音方案，而非千篇一律的套餐服務，確保方案完全切合您的活動目標。" data-en="We take time to understand each client's needs and vision, delivering tailored AV solutions rather than one-size-fits-all packages, ensuring our proposals perfectly align with your event objectives.">我們深入了解每位客戶的需求與願景，提供針對性的影音方案，而非千篇一律的套餐服務，確保方案完全切合您的活動目標。</p>
+                </div>
+                <div class="commitment-card animate-on-scroll stagger-3">
+                    <span class="commitment-icon"><i class="fas fa-bolt" style="color: var(--accent-blue);"></i></span>
+                    <h3 data-zh="即時應變" data-en="Rapid Response">即時應變</h3>
+                    <p data-zh="活動現場瞬息萬變，我們的團隊具備快速應對突發狀況的能力，確保活動流程不受干擾，讓您安心專注於活動本身。" data-en="Live events are unpredictable. Our team is equipped to respond swiftly to any situation, ensuring your event runs without disruption so you can focus on what matters most.">活動現場瞬息萬變，我們的團隊具備快速應對突發狀況的能力，確保活動流程不受干擾，讓您安心專注於活動本身。</p>
+                </div>
+                <div class="commitment-card animate-on-scroll stagger-4">
+                    <span class="commitment-icon"><i class="fas fa-star" style="color: var(--accent-blue);"></i></span>
+                    <h3 data-zh="品質保證" data-en="Quality Assurance">品質保證</h3>
+                    <p data-zh="我們對每一個細節都嚴格把關，從設備選型、系統測試到現場執行，每個環節均符合專業標準，以品質贏得您的長期信任。" data-en="We rigorously oversee every detail — from equipment selection and system testing to on-site execution — ensuring every aspect meets professional standards and earning your long-term trust through quality.">我們對每一個細節都嚴格把關，從設備選型、系統測試到現場執行，每個環節均符合專業標準，以品質贏得您的長期信任。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Scope -->
+    <section class="section section-darker">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 data-zh="服務範疇" data-en="Service Scope">服務範疇</h2>
+                <div class="section-divider"></div>
+                <p data-zh="全方位影音技術能力，一站式滿足您的需求" data-en="Comprehensive AV capabilities — one-stop solutions for all your needs">全方位影音技術能力，一站式滿足您的需求</p>
+            </div>
+            <div class="service-scope-list animate-on-scroll">
+                <div class="scope-item"><i class="fas fa-lightbulb"></i><span data-zh="燈光設計" data-en="Lighting Design">燈光設計</span></div>
+                <div class="scope-item"><i class="fas fa-volume-up"></i><span data-zh="音響工程" data-en="Sound Engineering">音響工程</span></div>
+                <div class="scope-item"><i class="fas fa-tv"></i><span data-zh="LED 屏幕" data-en="LED Screens">LED 屏幕</span></div>
+                <div class="scope-item"><i class="fas fa-projector"></i><span data-zh="投影系統" data-en="Projection Systems">投影系統</span></div>
+                <div class="scope-item"><i class="fas fa-broadcast-tower"></i><span data-zh="直播串流" data-en="Live Streaming">直播串流</span></div>
+                <div class="scope-item"><i class="fas fa-theater-masks"></i><span data-zh="舞台設計" data-en="Stage Design">舞台設計</span></div>
+                <div class="scope-item"><i class="fas fa-film"></i><span data-zh="視覺效果（VJ）" data-en="Visual Effects (VJ)">視覺效果（VJ）</span></div>
+                <div class="scope-item"><i class="fas fa-video"></i><span data-zh="錄影拍攝" data-en="Video Production">錄影拍攝</span></div>
+                <div class="scope-item"><i class="fas fa-tools"></i><span data-zh="影音工程項目" data-en="AV Engineering">影音工程項目</span></div>
+                <div class="scope-item"><i class="fas fa-calendar-check"></i><span data-zh="活動統籌" data-en="Event Management">活動統籌</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-dark">
+        <div class="container animate-on-scroll">
+            <h2 data-zh="讓我們為您的活動提供最專業的支援" data-en="Let Us Provide the Most Professional Support for Your Event">讓我們為您的活動提供最專業的支援</h2>
+            <p data-zh="無論活動規模大小，我們都樂意為您提供度身訂製的影音解決方案" data-en="Regardless of event scale, we are happy to provide bespoke AV solutions tailored to your needs">無論活動規模大小，我們都樂意為您提供度身訂製的影音解決方案</p>
+            <a href="contact.html" class="btn-primary" data-zh="立即聯繫我們" data-en="Contact Us Now">立即聯繫我們</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/banner.001.jpeg" alt="JLS Pro">
+                <p data-zh="JLS Pro Limited 致力於為各類活動提供最專業的影音技術服務，以創新科技和精益求精的態度，打造令人難忘的視聽體驗。" data-en="JLS Pro Limited is dedicated to providing professional audio visual technical services for all types of events, delivering unforgettable experiences through innovative technology and relentless pursuit of excellence.">JLS Pro Limited 致力於為各類活動提供最專業的影音技術服務，以創新科技和精益求精的態度，打造令人難忘的視聽體驗。</p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="https://www.facebook.com/profile.php?id=61583541550779" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="快速連結" data-en="Quick Links">快速連結</h4>
+                <ul>
+                    <li><a href="index.html" data-zh="首頁" data-en="Home">首頁</a></li>
+                    <li><a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                    <li><a href="portfolio.html" data-zh="作品集" data-en="Portfolio">作品集</a></li>
+                    <li><a href="about.html" data-zh="關於我們" data-en="About">關於我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="服務項目" data-en="Services">服務項目</h4>
+                <ul>
+                    <li><a href="services.html" data-zh="燈光設計" data-en="Lighting Design">燈光設計</a></li>
+                    <li><a href="services.html" data-zh="音響工程" data-en="Sound Engineering">音響工程</a></li>
+                    <li><a href="services.html" data-zh="LED 屏幕" data-en="LED Screens">LED 屏幕</a></li>
+                    <li><a href="services.html" data-zh="直播串流" data-en="Live Streaming">直播串流</a></li>
+                    <li><a href="services.html" data-zh="舞台設計" data-en="Stage Design">舞台設計</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="聯絡資訊" data-en="Contact Info">聯絡資訊</h4>
+                <ul>
+                    <li><a href="mailto:jlau@jlspro.com.hk" data-zh-html="<i class='fas fa-envelope' style='margin-right: 8px;'></i>jlau@jlspro.com.hk" data-en-html="<i class='fas fa-envelope' style='margin-right: 8px;'></i>jlau@jlspro.com.hk"><i class="fas fa-envelope" style="margin-right: 8px;"></i>jlau@jlspro.com.hk</a></li>
+                    <li><a href="tel:+85253600853" data-zh-html="<i class='fas fa-phone' style='margin-right: 8px;'></i>+852 5360 0853" data-en-html="<i class='fas fa-phone' style='margin-right: 8px;'></i>+852 5360 0853"><i class="fas fa-phone" style="margin-right: 8px;"></i>+852 5360 0853</a></li>
+                    <li><a href="https://www.jlspro.com.hk" target="_blank" data-zh-html="<i class='fas fa-globe' style='margin-right: 8px;'></i>www.jlspro.com.hk" data-en-html="<i class='fas fa-globe' style='margin-right: 8px;'></i>www.jlspro.com.hk"><i class="fas fa-globe" style="margin-right: 8px;"></i>www.jlspro.com.hk</a></li>
+                    <li><a href="contact.html" data-zh-html="<i class='fas fa-map-marker-alt' style='margin-right: 8px;'></i>香港" data-en-html="<i class='fas fa-map-marker-alt' style='margin-right: 8px;'></i>Hong Kong"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>香港</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JLS Pro Limited. All Rights Reserved.</p>
+            <p>Professional · Proactive · Production</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang.js"></script>
+</body>
+</html>
