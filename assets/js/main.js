@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMovingDots();
     // Counter animation
     initCounters();
+    // Hero slideshow
+    initHeroSlideshow();
 });
 
 /* Navbar */
@@ -291,4 +293,37 @@ function handleFormSubmit(e) {
             form.reset();
         }, 3000);
     }, 1500);
+}
+
+
+/* Hero Image Slideshow (fallback if video doesn't load) */
+function initHeroSlideshow() {
+    const slideshow = document.querySelector('.hero-slideshow');
+    if (!slideshow) return;
+    
+    const images = slideshow.querySelectorAll('img');
+    if (images.length <= 1) return;
+    
+    const video = document.querySelector('.hero-video-bg');
+    
+    // If video loads successfully, hide slideshow
+    if (video) {
+        video.addEventListener('canplaythrough', function() {
+            slideshow.style.display = 'none';
+        });
+        
+        // If video fails to load, show slideshow
+        video.addEventListener('error', function() {
+            video.style.display = 'none';
+            slideshow.style.display = 'block';
+        });
+    }
+    
+    // Slideshow rotation
+    let currentIndex = 0;
+    setInterval(function() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }, 5000);
 }

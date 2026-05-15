@@ -47,7 +47,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="background-image: linear-gradient(180deg, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.95) 100%), url('assets/images/photos/event-production-setup.jpg'); background-size: cover; background-position: center;">
         <img src="assets/images/JLSw.png" alt="" class="page-brand-watermark">
         <h1 data-zh="聯絡我們" data-en="Contact Us">聯絡我們</h1>
         <p data-zh="歡迎與我們聯繫，獲取專業影音服務報價及諮詢" data-en="Get in touch for professional AV service quotations and consultations">歡迎與我們聯繫，獲取專業影音服務報價及諮詢</p>
@@ -75,33 +75,36 @@
                             <input type="tel" id="phone" name="phone" data-zh-placeholder="請輸入您的聯絡電話" data-en-placeholder="Enter your phone number" placeholder="請輸入您的聯絡電話">
                         </div>
                         <div class="form-group">
-                            <label for="service" data-zh="感興趣的服務" data-en="Service of Interest">感興趣的服務</label>
-                            <select id="service" name="service">
-                                <option value="" data-zh="請選擇服務類型" data-en="Select a service type">請選擇服務類型</option>
-                                <option value="lighting" data-zh="燈光設計" data-en="Lighting Design">燈光設計</option>
-                                <option value="sound" data-zh="音響工程" data-en="Sound Engineering">音響工程</option>
-                                <option value="led" data-zh="LED 屏幕 & 投影" data-en="LED Screens & Projection">LED 屏幕 &amp; 投影</option>
-                                <option value="streaming" data-zh="直播串流" data-en="Live Streaming">直播串流</option>
-                                <option value="stage" data-zh="舞台設計" data-en="Stage Design">舞台設計</option>
-                                <option value="vj" data-zh="視覺效果（VJ）" data-en="Visual Effects (VJ)">視覺效果（VJ）</option>
-                                <option value="video" data-zh="錄影拍攝" data-en="Video Production">錄影拍攝</option>
-                                <option value="av-engineering" data-zh="影音工程項目" data-en="AV Engineering">影音工程項目</option>
-                                <option value="event" data-zh="活動統籌" data-en="Event Management">活動統籌</option>
+                            <label for="event-type" data-zh="活動類型" data-en="Event Type">活動類型</label>
+                            <select id="event-type" name="event-type">
+                                <option value="" data-zh="請選擇活動類型" data-en="Select an event type">請選擇活動類型</option>
+                                <option value="corporate" data-zh="企業活動" data-en="Corporate Event">企業活動</option>
+                                <option value="concert" data-zh="演唱會 / 音樂節" data-en="Concert / Music Festival">演唱會 / 音樂節</option>
+                                <option value="exhibition" data-zh="展覽" data-en="Exhibition">展覽</option>
+                                <option value="launch" data-zh="發佈會" data-en="Product Launch">發佈會</option>
+                                <option value="wedding" data-zh="婚禮" data-en="Wedding">婚禮</option>
+                                <option value="livestream" data-zh="線上直播" data-en="Online Livestream">線上直播</option>
+                                <option value="conference" data-zh="會議 / 研討會" data-en="Conference / Seminar">會議 / 研討會</option>
+                                <option value="gala" data-zh="晚宴 / 頒獎典禮" data-en="Gala / Awards Ceremony">晚宴 / 頒獎典禮</option>
                                 <option value="other" data-zh="其他" data-en="Other">其他</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="event-type" data-zh="活動類型" data-en="Event Type">活動類型</label>
-                            <select id="event-type" name="event-type">
-                                <option value="" data-zh="請選擇活動類型" data-en="Select an event type">請選擇活動類型</option>
-                                <option value="concert" data-zh="演唱會" data-en="Concert">演唱會</option>
-                                <option value="conference" data-zh="會議" data-en="Conference">會議</option>
-                                <option value="exhibition" data-zh="展覽" data-en="Exhibition">展覽</option>
-                                <option value="corporate" data-zh="企業活動" data-en="Corporate Event">企業活動</option>
-                                <option value="wedding" data-zh="婚禮" data-en="Wedding">婚禮</option>
-                                <option value="launch" data-zh="發佈會" data-en="Product Launch">發佈會</option>
+                            <label for="service" data-zh="所需服務（可多選）" data-en="Required Services (multiple)">所需服務（可多選）</label>
+                            <select id="service" name="service" multiple size="5" style="min-height: 140px;">
+                                <option value="sound" data-zh="音響工程" data-en="Sound Engineering">音響工程</option>
+                                <option value="lighting" data-zh="燈光設計" data-en="Lighting Design">燈光設計</option>
+                                <option value="led" data-zh="LED 屏幕" data-en="LED Screens">LED 屏幕</option>
+                                <option value="projection" data-zh="投影" data-en="Projection">投影</option>
+                                <option value="streaming" data-zh="直播串流" data-en="Live Streaming">直播串流</option>
+                                <option value="stage" data-zh="舞台設計" data-en="Stage Design">舞台設計</option>
+                                <option value="vj" data-zh="VJ / 視覺效果" data-en="VJ / Visual Effects">VJ / 視覺效果</option>
+                                <option value="video" data-zh="錄影拍攝" data-en="Video Production">錄影拍攝</option>
+                                <option value="av-engineering" data-zh="影音工程" data-en="AV Engineering">影音工程</option>
+                                <option value="event" data-zh="活動統籌" data-en="Event Management">活動統籌</option>
                                 <option value="other" data-zh="其他" data-en="Other">其他</option>
                             </select>
+                            <small style="color: var(--text-gray); margin-top: 0.3rem; display: block;" data-zh="按住 Ctrl/Cmd 可多選" data-en="Hold Ctrl/Cmd to select multiple">按住 Ctrl/Cmd 可多選</small>
                         </div>
                         <div class="form-group">
                             <label for="message" data-zh="訊息內容 *" data-en="Message *">訊息內容 *</label>
@@ -209,6 +212,14 @@
             </div>
         </div>
     </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip" data-zh="WhatsApp 聯繫我們" data-en="Chat with us on WhatsApp">WhatsApp 聯繫我們</span>
+        <a href="https://wa.me/85253600853" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

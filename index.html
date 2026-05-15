@@ -48,6 +48,18 @@
 
     <!-- Hero Section - Redesigned -->
     <section class="hero">
+        <!-- Background Video -->
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+            <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        </video>
+        <!-- Fallback Image Slideshow -->
+        <div class="hero-slideshow">
+            <img src="assets/images/photos/hero-concert-lights.jpg" alt="" class="active">
+            <img src="assets/images/photos/stage-lights-wide.jpeg" alt="">
+            <img src="assets/images/photos/concert-crowd-lights.jpg" alt="">
+            <img src="assets/images/photos/event-stage-lights.jpg" alt="">
+        </div>
+        <div class="hero-video-overlay"></div>
         <div class="hero-bg-animation"></div>
         <div class="hero-glow-orbs">
             <div class="orb orb-1"></div>
@@ -154,6 +166,14 @@
             <a href="contact.html" class="btn-primary" data-zh="免費諮詢" data-en="Free Consultation">免費諮詢</a>
         </div>
     </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip" data-zh="WhatsApp 聯繫我們" data-en="Chat with us on WhatsApp">WhatsApp 聯繫我們</span>
+        <a href="https://wa.me/85253600853" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
