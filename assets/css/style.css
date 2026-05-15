@@ -1468,6 +1468,24 @@ img {
     overflow: hidden;
 }
 
+/* When page-bg-effects is present, make content backgrounds transparent so glow shows through */
+body:has(.page-bg-effects) .page-header {
+    background: transparent;
+}
+
+body:has(.page-bg-effects) .section-dark,
+body:has(.page-bg-effects) .section-darker {
+    background: transparent;
+}
+
+body:has(.page-bg-effects) .cta-section {
+    background: transparent;
+}
+
+body:has(.page-bg-effects) .footer {
+    background: transparent;
+}
+
 .page-bg-effects .glow-orb {
     position: absolute;
     border-radius: 50%;
