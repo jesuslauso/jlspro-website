@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     // Particle animation (hero)
     initParticles();
+    // Page background particles (subpages)
+    initPageParticles();
+    // Moving dots animation (subpages)
+    initMovingDots();
     // Counter animation
     initCounters();
 });
@@ -68,7 +72,7 @@ function initScrollAnimations() {
     elements.forEach(el => observer.observe(el));
 }
 
-/* Particle Animation */
+/* Particle Animation (Hero section on homepage) */
 function initParticles() {
     const container = document.querySelector('.hero-bg-animation');
     if (!container) return;
@@ -90,6 +94,73 @@ function initParticles() {
         particle.style.height = particle.style.width;
         
         container.appendChild(particle);
+    }
+}
+
+/* Page Background Particles (subpages) */
+function initPageParticles() {
+    const container = document.querySelector('.page-particles');
+    if (!container) return;
+    
+    const particleCount = 40;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('moving-dot');
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        
+        // Random colors between blue and purple
+        const colors = ['var(--accent-blue)', 'var(--accent-purple)', '#fff'];
+        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.width = (Math.random() * 3 + 1) + 'px';
+        particle.style.height = particle.style.width;
+        
+        // Each particle gets a unique animation
+        const duration = (Math.random() * 8 + 6) + 's';
+        const delay = Math.random() * 6 + 's';
+        
+        // Random movement direction
+        const moveX = (Math.random() - 0.5) * 200;
+        const moveY = (Math.random() - 0.5) * 200;
+        
+        particle.style.animation = 'dot-drift-' + (i % 5) + ' ' + duration + ' ' + delay + ' ease-in-out infinite';
+        
+        container.appendChild(particle);
+    }
+}
+
+/* Moving Dots Animation (subpages - larger glowing dots that move around) */
+function initMovingDots() {
+    const bgEffects = document.querySelector('.page-bg-effects');
+    if (!bgEffects) return;
+    
+    const dotCount = 15;
+    
+    for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('moving-dot');
+        dot.style.position = 'absolute';
+        dot.style.left = Math.random() * 100 + '%';
+        dot.style.top = Math.random() * 100 + '%';
+        
+        const colors = ['var(--accent-blue)', 'var(--accent-purple)', '#fff'];
+        dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+        
+        // Larger glowing dots
+        const size = (Math.random() * 4 + 2) + 'px';
+        dot.style.width = size;
+        dot.style.height = size;
+        dot.style.borderRadius = '50%';
+        dot.style.boxShadow = '0 0 6px currentColor';
+        dot.style.opacity = (Math.random() * 0.5 + 0.3).toString();
+        
+        // Unique animation per dot
+        const duration = (Math.random() * 10 + 8) + 's';
+        const delay = Math.random() * 5 + 's';
+        dot.style.animation = 'dot-drift-' + (i % 5) + ' ' + duration + ' ' + delay + ' ease-in-out infinite alternate';
+        
+        bgEffects.appendChild(dot);
     }
 }
 
