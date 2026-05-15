@@ -1473,6 +1473,10 @@ body:has(.page-bg-effects) .page-header {
     background: transparent;
 }
 
+body:has(.page-bg-effects) .hero {
+    background: transparent;
+}
+
 body:has(.page-bg-effects) .section-dark,
 body:has(.page-bg-effects) .section-darker {
     background: transparent;
