@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     // Particle animation (hero)
     initParticles();
+    // Randomize glow orb positions (subpages)
+    initGlowOrbs();
     // Page background particles (subpages)
     initPageParticles();
     // Moving dots animation (subpages)
@@ -95,6 +97,59 @@ function initParticles() {
         
         container.appendChild(particle);
     }
+}
+
+/* Randomize Glow Orb positions and colors on each page load (subpages) */
+function initGlowOrbs() {
+    const bgEffects = document.querySelector('.page-bg-effects');
+    if (!bgEffects) return;
+
+    const orbs = bgEffects.querySelectorAll('.glow-orb');
+    if (orbs.length === 0) return;
+
+    // Color palette: mix of blues, purples, teals, and magentas
+    const colorOptions = [
+        '#00d4ff',  // accent blue
+        '#7b2ff7',  // accent purple
+        '#00ffcc',  // teal
+        '#ff00aa',  // magenta
+        '#0066ff',  // deep blue
+        '#aa00ff',  // violet
+        'rgba(0, 212, 255, 0.8)',
+        'rgba(123, 47, 247, 0.8)'
+    ];
+
+    orbs.forEach((orb, index) => {
+        // Random position: anywhere on the viewport (allow partial off-screen for natural look)
+        const topPct  = (Math.random() * 120 - 10);  // -10% to 110%
+        const leftPct = (Math.random() * 120 - 10);  // -10% to 110%
+
+        // Random size between 200px and 500px
+        const size = Math.floor(Math.random() * 300 + 200) + 'px';
+
+        // Pick two random colors for a gradient
+        const color1 = colorOptions[Math.floor(Math.random() * colorOptions.length)];
+        const color2 = colorOptions[Math.floor(Math.random() * colorOptions.length)];
+        const angle  = Math.floor(Math.random() * 360);
+
+        // Random opacity between 0.25 and 0.5
+        const opacity = (Math.random() * 0.25 + 0.25).toFixed(2);
+
+        // Random animation delay so orbs don't all move in sync
+        const delay = (Math.random() * 6).toFixed(1) + 's';
+
+        // Apply styles (override the CSS-fixed positions)
+        orb.style.top    = topPct + '%';
+        orb.style.left   = leftPct + '%';
+        orb.style.right  = 'auto';
+        orb.style.bottom = 'auto';
+        orb.style.transform = 'none';
+        orb.style.width  = size;
+        orb.style.height = size;
+        orb.style.background = `linear-gradient(${angle}deg, ${color1}, ${color2})`;
+        orb.style.opacity = opacity;
+        orb.style.animationDelay = delay;
+    });
 }
 
 /* Page Background Particles (subpages) */
