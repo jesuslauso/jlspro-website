@@ -430,7 +430,7 @@ img {
 
 .hero-subtitle {
     font-size: 1.1rem;
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     max-width: 750px;
     margin: 0 auto 2.5rem;
     line-height: 1.8;
@@ -562,7 +562,7 @@ img {
 
 .section-header p {
     font-size: 1.1rem;
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -635,7 +635,7 @@ img {
 }
 
 .service-card p {
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     font-size: 0.95rem;
     line-height: 1.7;
 }
@@ -810,7 +810,7 @@ img {
 
 .cta-section p {
     font-size: 1.1rem;
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     margin-bottom: 2rem;
     position: relative;
 }
@@ -835,7 +835,7 @@ img {
 }
 
 .about-text p {
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     margin-bottom: 1.2rem;
     line-height: 1.8;
 }
@@ -939,8 +939,9 @@ img {
 }
 
 .value-card p {
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 /* Team Section */
@@ -1078,7 +1079,7 @@ img {
 }
 
 .contact-info-item p {
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     font-size: 0.95rem;
 }
 
@@ -1178,7 +1179,7 @@ img {
 }
 
 .footer-brand p {
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     font-size: 0.9rem;
     line-height: 1.7;
 }
@@ -1419,7 +1420,7 @@ img {
 }
 
 .service-detail-content p {
-    color: var(--text-gray);
+    color: var(--text-light-gray);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -1962,6 +1963,7 @@ body:has(.page-bg-effects) .footer {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.5px;
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 
@@ -2051,8 +2053,8 @@ body:has(.page-bg-effects) .footer {
 }
 
 .process-step p {
-    font-size: 0.8rem;
-    color: var(--text-gray);
+    font-size: 0.85rem;
+    color: var(--text-light-gray);
     max-width: 140px;
 }
 
