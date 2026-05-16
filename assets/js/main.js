@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounters();
     // Hero slideshow
     initHeroSlideshow();
+    // Services accordion
+    initAccordion();
 });
 
 /* Navbar */
@@ -336,4 +338,39 @@ function initHeroSlideshow() {
         currentIndex = (currentIndex + 1) % images.length;
         images[currentIndex].classList.add('active');
     }, 5000);
+}
+
+
+/* Services Accordion */
+function initAccordion() {
+    const items = document.querySelectorAll('.accordion-item');
+    if (!items.length) return;
+
+    // Set background images from data-bg attribute
+    items.forEach(function(item, idx) {
+        const bgUrl = item.getAttribute('data-bg');
+        if (bgUrl) {
+            const style = document.createElement('style');
+            style.textContent = '.accordion-item:nth-child(' + (idx + 1) + ')::before { background-image: url(' + bgUrl + '); }';
+            document.head.appendChild(style);
+        }
+    });
+
+    // Click handler
+    items.forEach(function(item) {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+            // Close all items
+            items.forEach(function(i) { i.classList.remove('active'); });
+            // Open clicked item if it was closed
+            if (!isActive) {
+                item.classList.add('active');
+                // Smooth scroll to the item
+                setTimeout(function() {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        });
+    });
 }
